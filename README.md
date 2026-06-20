@@ -25,7 +25,7 @@ git clone https://github.com/GoneTarou/rails-template.git app
 cd app
 ```
 
-mise の設定を信頼
+## mise の設定を信頼
 
 このテンプレートは mise.toml を使用しています。
 
