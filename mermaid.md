@@ -1,12 +1,13 @@
 ```mermaid
 erDiagram
     USERS ||--o{ SESSIONS : has
-    USERS ||--o{ DIARIES : writes
+    USERS ||--o{ DIARIES : has
+    USERS ||--o{ OAUTH : has
 
     USERS {
         bigint id PK
-        string nickname
-        string email
+        string email UK
+        string password_digest
         datetime created_at
         datetime updated_at
     }
@@ -16,6 +17,15 @@ erDiagram
         bigint user_id FK
         string ip_address
         string user_agent
+        datetime created_at
+        datetime updated_at
+    }
+
+    OAUTH {
+        bigint id PK
+        bigint user_id FK
+        string provider
+        string uid
         datetime created_at
         datetime updated_at
     }
@@ -30,4 +40,3 @@ erDiagram
         datetime created_at
         datetime updated_at
     }
-```
