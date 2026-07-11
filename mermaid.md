@@ -7,7 +7,10 @@ erDiagram
     USERS {
         bigint id PK
         string email UK
+        string username
         string password_digest
+        boolean guest
+        datetime guest_expires_at
         datetime created_at
         datetime updated_at
     }
@@ -34,7 +37,6 @@ erDiagram
         bigint id PK
         bigint user_id FK
         date diary_date
-        string mood
         text body
         boolean published
         datetime created_at
