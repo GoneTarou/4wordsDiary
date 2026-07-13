@@ -23,6 +23,12 @@
         "schemaName": "public",
         "x": 487.29443359375,
         "y": 261.5869612876416
+      },
+      {
+        "name": "oauth_accounts",
+        "schemaName": "public",
+        "x": 486.682861328125,
+        "y": 553.261654445328
       }
     ],
     "tableGroupCollapseStates": [],
