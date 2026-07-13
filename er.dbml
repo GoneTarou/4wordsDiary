@@ -1,8 +1,8 @@
 Table users {
   id bigint [pk]
-  email varchar [unique]
-  username varchar
-  password_digest varchar
+  email varchar [unique, not null]
+  password_digest varchar [not null]
+  username varchar [not null]
   google_uid varchar [unique]
   guest boolean
   created_at datetime
