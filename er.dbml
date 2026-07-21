@@ -1,10 +1,10 @@
 Table users {
   id bigint [pk]
-  email varchar [unique, not null]
-  password_digest varchar [not null]
-  username varchar [not null]
+  email varchar [unique]
+  password_digest varchar
+  nickname varchar
+  guest_token varchar [unique]
   google_uid varchar [unique]
-  guest boolean
   created_at datetime
   updated_at datetime
 }
@@ -19,9 +19,7 @@ Table sessions {
 Table diaries {
   id bigint [pk]
   user_id bigint [not null, ref: > users.id]
-  diary_date date
   body text
-  published boolean
   created_at datetime
   updated_at datetime
 }
