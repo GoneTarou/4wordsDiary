@@ -6,7 +6,7 @@ erDiagram
     USERS {
         bigint id PK
         string email UK
-        string username
+        string nickname
         string password_digest
         string google_uid UK
         boolean guest
