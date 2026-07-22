@@ -1,13 +1,14 @@
-<footer class="footer">
-  <small>
-    <li class="nav-item"><%= link_to "X", '#', class: "nav-link" %></li>
-    <li class="nav-item"><%= link_to "GitHub", '#', class: "nav-link" %></li>
-  </small>
+<footer class="footer footer-horizontal bg-base-200 text-base-content p-6">
   <nav>
-    <ul>
-      <li class="nav-item"><%= link_to "このサイトについて", '#', class: "nav-link" %></li>
-      <li class="nav-item"><%= link_to "お問い合わせ", '#', class: "nav-link" %></li>
-      <li class="nav-item"><%= link_to "利用規約", '#', class: "nav-link" %></li>
-    </ul>
+    <h6 class="footer-title">SNS</h6>
+    <%= link_to "X", "#", class: "link link-hover" %>
+    <%= link_to "GitHub", "#", class: "link link-hover" %>
+  </nav>
+
+  <nav>
+    <h6 class="footer-title">Information</h6>
+    <%= link_to "このサイトについて", "#", class: "link link-hover" %>
+    <%= link_to "お問い合わせ", "#", class: "link link-hover" %>
+    <%= link_to "利用規約", "#", class: "link link-hover" %>
   </nav>
 </footer>
