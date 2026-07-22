@@ -1,4 +1,24 @@
-<div>
-  <h1 class="font-bold text-4xl">Users#new</h1>
-  <p>Find me in app/views/users/new.html.erb</p>
-</div>
+<%= form_with(model: @user) do |f| %>
+  <div class="mb-4">
+    <%= f.label :name, class: "block font-medium mb-2" %>
+    <%= f.text_field :name, class: "w-full border rounded px-3 py-2" %>
+  </div>
+
+  <div class="mb-4">
+    <%= f.label :email, class: "block font-medium mb-2" %>
+    <%= f.email_field :email, class: "w-full border rounded px-3 py-2" %>
+  </div>
+
+  <div class="mb-4">
+    <%= f.label :password, class: "block font-medium mb-2" %>
+    <%= f.password_field :password, class: "w-full border rounded px-3 py-2" %>
+  </div>
+
+  <div class="mb-6">
+    <%= f.label :password_confirmation, "Confirmation", class: "block font-medium mb-2" %>
+    <%= f.password_field :password_confirmation, class: "w-full border rounded px-3 py-2" %>
+  </div>
+
+  <%= f.submit "新規登録",
+  class: "w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700" %>
+<% end %>
