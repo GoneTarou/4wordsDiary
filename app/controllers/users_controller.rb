@@ -13,4 +13,10 @@ class UsersController < ApplicationController
       render :new, status: :unprocessable_entity
     end
   end
+
+  private
+
+  def user_params
+    params.expect(user: [:nickname, :email_address, :password, :password_confirmation])
+  end
 end
