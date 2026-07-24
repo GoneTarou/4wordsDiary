@@ -1,7 +1,12 @@
 Rails.application.routes.draw do
-  resources :diaries, only: [ :index ]
+  resources :users, only: [ :new, :create ]
   resource :session
-  resources :passwords, param: :token
-  resources :users, only: %i[new create]
+
+  namespace :user do
+    resource :profile, only: :show
+    resources :diaries, only: [:index, :new, :create, :destroy]
+  end
+
+  resources :diaries, only: [ :index, :show ]
   root "pages#home"
 end
