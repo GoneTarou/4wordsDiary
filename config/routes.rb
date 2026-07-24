@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   namespace :user do
     resource :profile, only: :show
-    resources :diaries, only: [:index, :new, :create, :destroy]
+    resources :diaries, only: [ :index, :new, :create, :destroy ]
   end
 
   resources :diaries, only: [ :index, :show ]
